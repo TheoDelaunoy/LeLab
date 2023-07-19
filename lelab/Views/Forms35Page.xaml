@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Nouveautés"
+    x:Class="lelab.Views.Forms35Page">
+    <NavigationPage.TitleView>
+        <StackLayout
+            HorizontalOptions="Center"
+            Orientation="Horizontal"
+            VerticalOptions="FillAndExpand"
+            Margin="{OnPlatform iOS='0,0,25,0', Android='0,0,80,0', Default=0}">
+            <Image Source="lab_logo.png" HeightRequest="40" />
+            <Label Text="Nouveautés Forms 3.5" TextColor="White" VerticalOptions="Center" FontAttributes="Bold"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ImageButton Source="lab_logo.png"
+                         BackgroundColor="Transparent"
+                         Margin="0,40,0,0"
+                         WidthRequest="100"
+                         Clicked="ImageButton_Clicked">
+
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity" Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                                        Value="0.8" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </ImageButton>
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Cette application a été écrite avec Xamarin Forms: " />
+                            <Span Text="en savoir plus" FontAttributes="Bold" TextColor="Blue" TextDecorations="Underline">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding ClickCommand}"
+                                        CommandParameter="https://docs.microsoft.com/en-us/xamarin/xamarin-forms/"/>
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

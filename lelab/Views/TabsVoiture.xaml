@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage BackgroundColor="#f4f4f4" Title="Voiture"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="lelab.Views.TabsVoiture">
+    <ContentPage.Content>
+        <Frame HorizontalOptions="Center" VerticalOptions="Center" HasShadow="False" Margin="20,0,20,0" BackgroundColor="#f4f4f4">
+            <Image x:Name="voitureImage" Source="lab_voiture.png" />
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>
+
